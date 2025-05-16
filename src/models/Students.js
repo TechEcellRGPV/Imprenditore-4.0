@@ -37,7 +37,12 @@ const studentSchema = new mongoose.Schema({
         type: String,
         enum: ['pending', 'completed', 'failed'],
         default: 'pending'
-    }
+    },
+    paymentDetails: {
+    razorpay_payment_id: String,
+    razorpay_order_id: String,
+    razorpay_signature: String
+  }
 }, {
     timestamps: true
 });

@@ -1,16 +1,26 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ListFilter } from "lucide-react";
 
 function Dashboard() {
   const [searchData, setSearchData] = useState("");
   const [filter, setFilter] = useState("all");
+  const [data, setData] = useState([]);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState({
     completed: true,
     pending: true,
     failed: true,
   });
+
+  useEffect(()=>{
+    if(!sessionStorage.getItem("adminAccess")){
+      window.location.href = "/admin/login";
+    }
+    // else{
+    //         handleGetData();
+    // }
+  },[])
 
   const dummyArray = [
     {
@@ -194,6 +204,30 @@ function Dashboard() {
       paymentStatus: "completed",
     },
   ];
+
+  // const handleGetData = async () =>{
+  //   try {
+  //     const response = await fetch("/api/getAll", {
+  //       method: "GET",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       }
+  //     });
+  //     const dataOfResponse = await response.json();
+  //     if (response.ok) {
+  //       console.log("Data fetched successfully:", dataOfResponse);
+  //       setData(dataOfResponse);
+  //     } else {
+  //       console.error("Error fetching data:", dataOfResponse);
+  //       alert("Error fetching data");
+  //     }
+
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //     alert("Error fetching data");
+      
+  //   }
+  // }
 
   const handleFilterChange = (status) => {
     setSelectedFilters((prevFilters) => ({

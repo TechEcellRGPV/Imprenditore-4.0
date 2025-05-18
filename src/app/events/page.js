@@ -133,10 +133,10 @@ export default function Events() {
               {events.map((event, index) => (
                 <div key={index} className="relative pl-12 pr-2">
                   {/* Timeline dot */}
-                  <div className="absolute left-[14px] transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-2 border-white z-20 top-5"></div>
+                  <div className="absolute left-[17px] transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-2 border-white z-20 top-5"></div>
 
                   {/* Horizontal connector line */}
-                  <div className="absolute top-5 left-4 w-8 h-0.5 bg-white"></div>
+                  <div className="absolute top-[29px] left-4 w-8 h-0.5 bg-white"></div>
 
                   {/* Event card */}
                   <div
@@ -216,7 +216,7 @@ export default function Events() {
                     >
                       {/* Horizontal connector line */}
                       <div
-                        className={`absolute top-6 w-12 lg:w-[20%] h-0.5 bg-white ${
+                        className={`absolute top-9 w-12 lg:w-[20%] h-0.5 bg-white ${
                           isLeft ? "right-0" : "left-0"
                         }`}
                       ></div>

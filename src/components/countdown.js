@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 const Countdown = () => {
   const calculateTimeLeft = () => {
-const eventDate = new Date("2025-05-28T00:00:00"); 
+    const eventDate = new Date("2025-05-28T00:00:00");
     const now = new Date();
     const difference = eventDate - now;
 
@@ -31,11 +31,14 @@ const eventDate = new Date("2025-05-28T00:00:00");
   }, []);
 
   return (
-    <div className="flex justify-center gap-6 py-10 bg-green-950">
+    <div className="flex justify-center items-center gap-4 sm:gap-6 py-8 px-4 bg-green-950 flex-nowrap overflow-x-auto">
       {Object.entries(timeLeft).map(([label, value]) => (
-        <div key={label} className="bg-white rounded-xl px-6 py-4 text-center shadow-md">
-          <p className="text-4xl font-extrabold text-black">{value}</p>
-          <p className="text-gray-500 font-semibold uppercase text-sm mt-2">
+        <div
+          key={label}
+          className="bg-white rounded-xl px-5 py-4 text-center shadow-md min-w-[80px]"
+        >
+          <p className="text-2xl font-extrabold text-black">{value}</p>
+          <p className="text-gray-500 font-semibold uppercase text-xs mt-1">
             {label}
           </p>
         </div>

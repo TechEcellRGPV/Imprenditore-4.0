@@ -1,6 +1,11 @@
+import Footer from "../../components/footer";
+import Header from "../../components/header";
+
 function RegistrationForm() {
   return (
-    <div className="min-h-screen bg-radial-[at_110%_45%] from-[#20c53e] via-[#0e4319] to-[#02300b] flex flex-col  justify-center items-center">
+    <>
+    <Header/>
+    <div className="min-h-screen pt:[6vmax] sm:pt-[2vmax] bg-radial-[at_110%_45%] from-[#20c53e] via-[#0e4319] to-[#02300b] flex flex-col  justify-center items-center">
       <div className="w-full max-w-xl p-8 rounded-lg">
         <div className="text-center m-8">
           <h1 className="text-4xl font-bold text-green-300 mb-2">
@@ -12,11 +17,11 @@ function RegistrationForm() {
 
         <form className="">
           <div className="mb-6">
-            <h2 className="text-xl font-semibold text-white mb-4">
+            <h2 className="text-xl font-semibold text-white mb-8">
               Personal Information
             </h2>
 
-            <div className="mb-4">
+            <div className="mb-8">
               <label htmlFor="name" className="block text-gray-300 mb-1">
                 Name <span className="text-red-400">*</span>
               </label>
@@ -29,7 +34,7 @@ function RegistrationForm() {
               />
             </div>
 
-            <div className="mb-4">
+            <div className="mb-8">
               <label htmlFor="email" className="block text-gray-300 mb-1">
                 Email Address <span className="text-red-400">*</span>
               </label>
@@ -43,7 +48,7 @@ function RegistrationForm() {
               />
             </div>
 
-            <div className="mb-4">
+            <div className="mb-8">
               <label htmlFor="mobile" className="block text-gray-300 mb-1">
                 Mobile Number <span className="text-red-400">*</span>
               </label>
@@ -57,7 +62,7 @@ function RegistrationForm() {
               />
             </div>
 
-            <div className="mb-4">
+            <div className="mb-8">
               <label htmlFor="college" className="block text-gray-300 mb-1">
                 College Name <span className="text-red-400">*</span>
               </label>
@@ -71,21 +76,21 @@ function RegistrationForm() {
               />
             </div>
 
-            <div className="mb-4">
-              <label htmlFor="enrollement" className="block text-gray-300 mb-1">
-                Enrollement No. <span className="text-red-400">*</span>
+            <div className="mb-8">
+              <label htmlFor="enrollment" className="block text-gray-300 mb-1">
+                Enrollment No. <span className="text-red-400">*</span>
               </label>
 
               <input
                 type="text"
-                id="enrollement"
-                name="enrollement"
-                placeholder="Enter your enrollement no."
+                id="enrollment"
+                name="enrolement"
+                placeholder="Enter your enrollment no."
                 className="w-full px-3 py-2 rounded bg-white text-gray-800"
               />
             </div>
 
-            <div className="mb-4">
+            <div className="mb-8">
               <label htmlFor="year" className="block text-gray-300 mb-1">
                 Year <span className="text-red-400">*</span>
               </label>
@@ -108,6 +113,8 @@ function RegistrationForm() {
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

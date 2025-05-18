@@ -39,3 +39,34 @@ body {
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+.perspective {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.transform-style {
+  transform-style: preserve-3d;
+}
+
+@media (hover: none) {
+  /* For devices that don't support hover */
+  .hover\:rotate-y-180:hover {
+    transform: none;
+  }
+  
+  /* Alternative for touch devices - add a tap behavior with JavaScript if needed */
+}
+
+/* You might need to add this to ensure proper stacking on mobile */
+@media (max-width: 768px) {
+  .perspective {
+    perspective: 800px;
+  }
+}

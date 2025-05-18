@@ -2,6 +2,7 @@
 
 import { KeyRound } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 function AdminLogin() {
   const [passkey, setPasskey] = useState("");
@@ -15,7 +16,7 @@ function AdminLogin() {
       window.location.href = "/admin/dashboard";
     }
     else{
-      alert("Invalid Passkey");
+      toast.error("Invalid Passkey");
       setPasskey("");
       setLoader(false);
     }

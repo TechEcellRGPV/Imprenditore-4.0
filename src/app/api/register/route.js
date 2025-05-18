@@ -1,16 +1,13 @@
-import { connectDB } from "@/lib/connectDB";
-import Student from "@/models/Students";
+import { connectDB } from "../../../lib/connectDB";
+import Student from "../../../models/Students";
 export async function POST(req){
     try{
-    const { name, email, mobileNo, collegeName, branch, year } = await req.json();
+    const { name, email, mobileNo, collegeName, enrollment, branch, year } = await req.json();
 
     // Validate the input data
-    if (!name || !email || !mobileNo || !collegeName || !year) {
+    if (!name || !email || !mobileNo || !collegeName || !year || !enrollment || !branch) {
         return new Response(JSON.stringify({ error: "All fields are required" }), { status: 400 });
     }
-    // Check if the email is already registered
-
-     
 
     // Connect to the database
     try {
@@ -31,6 +28,7 @@ export async function POST(req){
         mobileNo,
         collegeName,
         branch,
+        enrollment,
         year,
     });
 

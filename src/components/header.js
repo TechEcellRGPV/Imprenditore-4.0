@@ -17,9 +17,9 @@ export default function Header() {
 
         
         <nav className="hidden md:flex space-x-8">
-          <a href="#home" className="hover:text-green-300">Home</a>
+          <a href="/" className="hover:text-green-300">Home</a>
           <a href="#about" className="hover:text-green-300">About</a>
-          <a href="#events" className="hover:text-green-300">Events</a>
+          <a href="/events" className="hover:text-green-300">Events</a>
           <button className="bg-green-600 hover:bg-green-500 text-white px-6 py-2 rounded-md font-medium">
             Register Now
           </button>
@@ -41,8 +41,7 @@ export default function Header() {
           <button className="bg-green-600 hover:bg-green-500 text-white px-6 py-2 rounded-md font-medium">
             Register Now
           </button>
-          
-          
+  
         </div>
       )}
     </header>

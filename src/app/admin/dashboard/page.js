@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { ListFilter } from "lucide-react";
+import { toast } from "sonner";
 
 function Dashboard() {
   const [searchData, setSearchData] = useState("");
@@ -17,9 +18,9 @@ function Dashboard() {
     if(!sessionStorage.getItem("adminAccess")){
       window.location.href = "/admin/login";
     }
-    // else{
-    //         handleGetData();
-    // }
+    else{
+            handleGetData();
+    }
   },[])
 
   const dummyArray = [
@@ -205,29 +206,29 @@ function Dashboard() {
     },
   ];
 
-  // const handleGetData = async () =>{
-  //   try {
-  //     const response = await fetch("/api/getAll", {
-  //       method: "GET",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       }
-  //     });
-  //     const dataOfResponse = await response.json();
-  //     if (response.ok) {
-  //       console.log("Data fetched successfully:", dataOfResponse);
-  //       setData(dataOfResponse);
-  //     } else {
-  //       console.error("Error fetching data:", dataOfResponse);
-  //       alert("Error fetching data");
-  //     }
+  const handleGetData = async () =>{
+    try {
+      const response = await fetch("/api/getAll", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        }
+      });
+      const dataOfResponse = await response.json();
+      if (response.ok) {
+        console.log("Data fetched successfully:", dataOfResponse);
+        setData(dataOfResponse);
+      } else {
+        console.error("Error fetching data:", dataOfResponse);
+        toast.error("Error fetching data");
+      }
 
-  //   } catch (error) {
-  //     console.error("Error fetching data:", error);
-  //     alert("Error fetching data");
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      toast.error("Error fetching data");
       
-  //   }
-  // }
+    }
+  }
 
   const handleFilterChange = (status) => {
     setSelectedFilters((prevFilters) => ({
@@ -236,7 +237,7 @@ function Dashboard() {
     }));
   };
 
-  const filteredData = dummyArray.filter((data) => {
+  const filteredData = data.filter((data) => {
     const matchSearch = Object.values(data)
       .join(" ")
       .toLowerCase()
@@ -325,6 +326,9 @@ function Dashboard() {
               Branch
             </th>
             <th className="px-5 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold uppercase tracking-wider">
+              Enrollment Number
+            </th>
+            <th className="px-5 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold uppercase tracking-wider">
               Payment Status
             </th>
           </tr>
@@ -356,6 +360,9 @@ function Dashboard() {
               </td>
               <td className="px-5 py-3 whitespace-nowrap text-sm">
                 {data.branch}
+              </td>
+              <td className="px-5 py-3 whitespace-nowrap text-sm">
+                {data.enrollment}
               </td>
               <td className="px-5 py-3 whitespace-nowrap text-sm">
                 {data.paymentStatus}

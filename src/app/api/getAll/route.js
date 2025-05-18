@@ -1,5 +1,5 @@
-import { connectDB } from "@/lib/connectDB";
-import Student from "@/models/Students";
+import { connectDB } from "../../../lib/connectDB";
+import Student from "../../../models/Students";
 
 export async function GET(req) {
 

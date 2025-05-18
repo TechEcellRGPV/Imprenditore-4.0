@@ -20,7 +20,7 @@ export default function SpeakersSection() {
           <div key={index} className="text-center">
             <div
               className={`w-48 h-48 bg-gray-300 mx-auto ${
-                index === 0 ? "rounded-tl-[40px]" : "rounded-none"
+                index === 0 ? "rounded-tl-[40px]" : "rounded-tl-[40px]"
               }`}
             >
               

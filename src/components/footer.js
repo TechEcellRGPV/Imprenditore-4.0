@@ -13,7 +13,7 @@ export default function Footer() {
      
         <div className="flex space-x-4">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/ecell_rgpv/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-white rounded-full p-2 hover:bg-white hover:text-green-900 transition"
@@ -21,7 +21,7 @@ export default function Footer() {
             <FaInstagram />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/ecellrgpv/posts/?feedView=all"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-white rounded-full p-2 hover:bg-white hover:text-green-900 transition"
@@ -29,7 +29,7 @@ export default function Footer() {
             <FaLinkedinIn />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com/ecellrgpv"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-white rounded-full p-2 hover:bg-white hover:text-green-900 transition"

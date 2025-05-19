@@ -2,8 +2,8 @@ export default function About() {
   return (
     <section id="about" className="w-full bg-white text-green-900 py-24 px-6 md:px-16 font-sans">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
-        
-        {/* Left Content */}
+     
+
         <div className="md:w-1/2 space-y-6 text-center md:text-left">
           <h2 className="lg:text-6xl  sm:text-5xl font-bold font-serif text-green-800 leading-tight">
             About <span className="text-green-600">Imprenditore</span>
@@ -18,15 +18,15 @@ export default function About() {
           </button>
         </div>
 
-        {/* Right Image Composition */}
+     
         <div className="md:w-1/2 relative flex items-center justify-center">
-          {/* Main Image */}
+
           <img
             src="/images/about1.png"
             alt="Speaker on stage"
             className="rounded-2xl shadow-xl w-64 sm:w-72 md:w-80 z-10"
           />
-          {/* Floating Secondary Image */}
+         
           <img
             src="/images/about2.png"
             alt="Fire performer"

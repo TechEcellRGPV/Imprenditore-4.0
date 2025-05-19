@@ -31,13 +31,13 @@ const events = [
 
 const EventSchedule = () => {
   return (
-    <section className="bg-green-950 text-white px-4 py-16">
+    <section className="bg-[#073218] text-white px-4 py-16">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl font-bold mb-6 text-left text-green-300">Event Schedule</h2>
+        <h2 className="lg:text-5xl font-bold mb-12  text-left text-white-300">Event Schedule</h2>
 
         {/* Date */}
-        <div className="flex items-center gap-3 bg-green-800 text-white rounded-md px-4 py-2 w-fit mb-10">
+        <div className="flex items-center gap-3 bg-[#29754E] hover:bg-[#256B47] text-white rounded-md lg:text-md px-4 py-2 w-fit mb-10">
           <CalendarDays size={20} />
           <p className="font-medium">Wednesday, May 28, 2025</p>
         </div>
@@ -45,14 +45,14 @@ const EventSchedule = () => {
         {/* Main layout */}
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Left column - Events list */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-12">
             {events.map((event, index) => (
               <div key={index} className="flex items-start gap-4">
                 <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
                   <img
                     src={event.image}
                     alt={event.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover block"
                   />
                 </div>
                 <div>
@@ -70,7 +70,7 @@ const EventSchedule = () => {
             ))}
 
             {/* Button */}
-            <button className="mt-4 bg-green-800 hover:bg-green-700 px-4 py-2 rounded text-white w-fit">
+            <button className="mt-4 bg-[#29754E] hover:bg-[#256B47] px-4 py-2 rounded text-white w-fit">
               View All Events
             </button>
           </div>

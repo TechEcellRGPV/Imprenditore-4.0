@@ -10,21 +10,35 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-green-950 text-white px-6 py-4 shadow-md fixed w-full z-50">
-      <div className="flex justify-evenly items-center max-w-7xl mx-auto">
- 
-        <div className="font-bold text-xl">IMPRENDITORE</div>
+    <header className="bg-[#073218] text-white px-6 py-4 shadow-md fixed w-full z-50">
+      <div className="relative flex items-center justify-between max-w-7xl mx-auto">
 
-        
-        <nav className="hidden md:flex space-x-8">
-          <a href="/" className="hover:text-green-300">Home</a>
+        {/* Left: Logo */}
+        <div className="flex-shrink-0">
+          <img 
+            src="/images/logo.png" 
+            alt="Imprenditore Logo"
+            className="h-10 w-auto"
+          />
+        </div>
+
+        {/* Center: Nav Links */}
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-8">
           <a href="#about" className="hover:text-green-300">About</a>
           <a href="/events" className="hover:text-green-300">Events</a>
-          <button className="bg-green-600 hover:bg-green-500 text-white px-6 py-2 rounded-md font-medium">
-            Register Now
-          </button>
+          <a href="/speakers" className="hover:text-green-300">Speakers</a>
+          <a href="#contact" className="hover:text-green-300">Contact Us</a>
         </nav>
 
+        {/* Right: Register Button */}
+        <div className="hidden md:block">
+          <button className="bg-[#29754E] hover:bg-[#256B47] text-white px-6 py-2 rounded-md font-medium">
+  Register Now
+</button>
+
+        </div>
+
+        {/* Hamburger for Mobile */}
         <div className="md:hidden">
           <button onClick={toggleNav}>
             {navOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -32,16 +46,17 @@ export default function Header() {
         </div>
       </div>
 
-
+      {/* Mobile Nav */}
       {navOpen && (
         <div className="md:hidden bg-green-950 text-white px-6 py-4 space-y-3">
-          <a href="#home" className="block hover:text-green-300">Home</a>
+          <a href="/" className="block hover:text-green-300">Home</a>
           <a href="#about" className="block hover:text-green-300">About</a>
-          <a href="#events" className="block hover:text-green-300">Events</a>
-          <button className="bg-green-600 hover:bg-green-500 text-white px-6 py-2 rounded-md font-medium">
+          <a href="/events" className="block hover:text-green-300">Events</a>
+          <a href="/speakers" className="block hover:text-green-300">Speakers</a>
+          <a href="#contact" className="block hover:text-green-300">Contact Us</a>
+          <button className="bg-green-600 hover:bg-green-500 text-white px-6 py-2 rounded-md font-medium w-full">
             Register Now
           </button>
-  
         </div>
       )}
     </header>

@@ -1,19 +1,19 @@
 export default function About() {
   return (
     <section id="about" className="w-full bg-white text-green-900 py-24 px-6 md:px-16 font-sans">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
         
         {/* Left Content */}
         <div className="md:w-1/2 space-y-6 text-center md:text-left">
-          <h2 className="text-4xl sm:text-5xl font-bold font-serif text-green-800 leading-tight">
+          <h2 className="lg:text-6xl  sm:text-5xl font-bold font-serif text-green-800 leading-tight">
             About <span className="text-green-600">Imprenditore</span>
           </h2>
-          <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+          <p className="text-gray-700 text-base lg:text-2xl sm:text-lg leading-relaxed">
             IMPRENDITORE, the annual flagship event hosted by E-Cell RGPV, returns for its fourth edition
             with a powerful focus on sustainability. This extravaganza is designed to ignite ecological innovation in students
             and offer practical pathways to sustainable development.
           </p>
-          <button className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+          <button className="bg-[#29754E] hover:bg-[#256B47] text-white px-6 py-3 my-6 rounded-md font-medium transition duration-300">
             More About Us
           </button>
         </div>

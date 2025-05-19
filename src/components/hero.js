@@ -3,13 +3,13 @@ export default function Hero() {
     <section className="bg-[#073218] text-white px-6 pt-64 pb-20">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
 
-        {/* Left Side: Main Logo Title */}
+       
         <div className="md:w-2/3 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-left md:text-left">
           <span className="block">IMPRENDITORE 4.O</span>
           
         </div>
 
-        {/* Right Side: Details */}
+       
         <div className="md:w-1/2 text-center md:text-left">
           <p className="text-sm sm:text-base lg:text-xl font-mono text-white mb-4">
             May 28, 2025 | RGPV Campus

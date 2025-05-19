@@ -13,7 +13,7 @@ export default function Header() {
     <header className="bg-[#073218] text-white px-6 py-4 shadow-md fixed w-full z-50">
       <div className="relative flex items-center justify-between max-w-7xl mx-auto">
 
-        {/* Left: Logo */}
+        
         <div className="flex-shrink-0">
           <img 
             src="/images/logo.png" 
@@ -22,7 +22,6 @@ export default function Header() {
           />
         </div>
 
-        {/* Center: Nav Links */}
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-8">
           <a href="#about" className="hover:text-green-300">About</a>
           <a href="/events" className="hover:text-green-300">Events</a>
@@ -30,7 +29,7 @@ export default function Header() {
           <a href="#contact" className="hover:text-green-300">Contact Us</a>
         </nav>
 
-        {/* Right: Register Button */}
+    
         <div className="hidden md:block">
           <button className="bg-[#29754E] hover:bg-[#256B47] text-white px-6 py-2 rounded-md font-medium">
   Register Now
@@ -38,7 +37,7 @@ export default function Header() {
 
         </div>
 
-        {/* Hamburger for Mobile */}
+     
         <div className="md:hidden">
           <button onClick={toggleNav}>
             {navOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -46,7 +45,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Nav */}
+      
       {navOpen && (
         <div className="md:hidden bg-green-950 text-white px-6 py-4 space-y-3">
           <a href="/" className="block hover:text-green-300">Home</a>

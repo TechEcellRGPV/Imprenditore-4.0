@@ -4,14 +4,13 @@ export async function POST(req){
     try{
     const { name, email, mobileNo, collegeName, enrollment, branch, year } = await req.json();
 
-    // Validate the input data
+ 
     if (!name || !email || !mobileNo || !collegeName || !year || !enrollment || !branch) {
         return new Response(JSON.stringify({ error: "All fields are required" }), { status: 400 });
     }
 
-    // Connect to the database
-    try {
-        await connectDB();
+    try { 
+        await connectDB(); 
         console.log("Connected to the database");
     
     } catch (error) {

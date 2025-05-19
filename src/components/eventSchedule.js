@@ -31,10 +31,10 @@ const events = [
 
 const EventSchedule = () => {
   return (
-    <section className="bg-[#073218] text-white px-4 py-16">
+    <section className="bg-[#073218] text-white px-15 sm:px-4 py-16">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-5xl font-bold mb-12  text-left text-white-300">Event Schedule</h2>
+        <h2 className="text-5xl font-bold mb-12 text-center sm:text-left text-white-300">Event Schedule</h2>
 
         {/* Date */}
         <div className="flex items-center gap-3 bg-[#29754E] hover:bg-[#256B47] text-white rounded-md lg:text-md px-4 py-2 w-fit mb-10">
@@ -48,7 +48,7 @@ const EventSchedule = () => {
           <div className="flex flex-col gap-12">
             {events.map((event, index) => (
               <div key={index} className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
+                <div className="w-16 h-24 bg-white rounded-md overflow-hidden">
                   <img
                     src={event.image}
                     alt={event.name}
@@ -57,7 +57,7 @@ const EventSchedule = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold">{event.name}</h3>
-                  <p className="flex items-center text-sm text-gray-300 mt-1">
+                  <p className="flex items-center text-sm text-gray-300 my-3">
                     <Clock size={16} className="mr-2" />
                     {event.time}
                   </p>
@@ -80,7 +80,7 @@ const EventSchedule = () => {
             <img
               src="/images/timeline.png"
               alt="Event"
-              className="w-full h-100 object-cover rounded-xl shadow-lg"
+              className="w-full h-120 object-cover rounded-xl shadow-lg"
             />
           </div>
         </div>

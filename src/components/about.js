@@ -5,15 +5,15 @@ export default function About() {
      
 
         <div className="md:w-1/2 space-y-6 text-center md:text-left">
-          <h2 className="lg:text-6xl  sm:text-5xl font-bold font-serif text-green-800 leading-tight">
+          <h2 className="lg:text-5xl text-2xl  sm:text-4xl font-bold font-serif text-green-800 leading-tight">
             About <span className="text-green-600">Imprenditore</span>
           </h2>
-          <p className="text-gray-700 text-base lg:text-2xl sm:text-lg leading-relaxed">
+          <p className="text-[#29754E] text-base lg:text-2xl sm:text-lg leading-relaxed">
             IMPRENDITORE, the annual flagship event hosted by E-Cell RGPV, returns for its fourth edition
             with a powerful focus on sustainability. This extravaganza is designed to ignite ecological innovation in students
             and offer practical pathways to sustainable development.
           </p>
-          <button className="bg-[#29754E] hover:bg-[#256B47] text-white px-6 py-3 my-6 rounded-md font-medium transition duration-300">
+          <button className="bg-[#29754E] hover:bg-[#256B47] text-white px-8 py-4 my-6 rounded-md font-medium transition duration-300">
             More About Us
           </button>
         </div>

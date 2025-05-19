@@ -4,7 +4,7 @@ import { FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="bg-[#073218] text-white py-6 px-4">
-      <div className="flex justify-between items-center flex-wrap gap-4">
+      <div className="flex justify-center sm:justify-between items-center flex-wrap gap-4">
        
         <div className="flex items-center space-x-2">
           <img src="/images/logo.png" alt="Imprenditore Logo" className="h-10" />

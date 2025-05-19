@@ -1,11 +1,11 @@
 const speakers = [
   {
-    name: "PP",
+    name: "Speaker Name",
     bio: "Expert in AI and Ethics.",
     image: "/speaker1.jpg",
   },
   {
-    name: "PP",
+    name: "Speaker Name",
     bio: "Founder of FutureTech.",
     image: "/speaker2.jpg",
   },
@@ -13,8 +13,8 @@ const speakers = [
 
 export default function SpeakersSection() {
   return (
-    <div className="bg-gradient-to-br from-white to-green-50 py-10 px-6">
-      <h2 className="lg:text-5xl lg:ml-24  font-bold text-green-900 mb-20">Speakers</h2>
+    <div id="speakers" className="bg-gradient-to-br from-white to-green-50 py-20 px-6">
+      <h2 className="lg:text-5xl lg:ml-24 text-3xl text-center sm:text-left  font-bold text-green-900 mb-20">Speakers</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {speakers.map((speaker, index) => (
           <div key={index} className="text-center">
@@ -25,8 +25,8 @@ export default function SpeakersSection() {
             >
               
             </div>
-            <h3 className="mt-6 text-4xl font-semibold text-green-900">{speaker.name}</h3>
-            <p className="text-2xl text-gray-600">{speaker.bio}</p>
+            <h3 className="mt-6 text-2xl sm:text-4xl text-[#004B0E]">{speaker.name}</h3>
+            <p className=" text-xl sm:text-2xl text-gray-600">{speaker.bio}</p>
           </div>
         ))}
       </div>

@@ -31,11 +31,11 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center gap-4 sm:gap-6 py-8 px-4 bg-[#073218] flex-nowrap overflow-x-auto">
+    <div className="flex  justify-center items-center gap-4 sm:gap-6 py-8 px-5 sm:px-4 bg-[#073218] flex-nowrap overflow-x-hidden">
       {Object.entries(timeLeft).map(([label, value]) => (
         <div
           key={label}
-          className="bg-white rounded-xl px-5 py-4 text-center shadow-md min-w-[80px]"
+          className="bg-white rounded-xl px-3 sm:px-5 py-4 text-center shadow-md min-w-[60px] sm:min-w-[80px]"
         >
           <p className="text-2xl font-extrabold text-black">{value}</p>
           <p className="text-gray-500 font-semibold uppercase text-xs mt-1">

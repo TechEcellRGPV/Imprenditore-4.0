@@ -1,11 +1,12 @@
+"use client";
 export default function Hero() {
   return (
-    <section className="bg-[#073218] text-white px-6 pt-64 pb-20">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+    <section className="bg-[#073218] text-white px-6 pt-37 sm:pt-60 pb-30">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-end justify-between gap-12">
 
        
-        <div className="md:w-2/3 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-left md:text-left">
-          <span className="block">IMPRENDITORE 4.O</span>
+        <div className="md:w-2/3 text-4xl text-center sm:text-5xl lg:text-6xl font-bold tracking-wide leading-tight sm:text-left md:text-left">
+         <span className="block">IMPRENDITORE 4.O</span>
           
         </div>
 
@@ -22,10 +23,10 @@ export default function Hero() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie lacus eget sapien placerat, id aliquet purus gravida.
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
-            <button className="bg-[#29754E] hover:bg-[#256B47] text-white px-6 py-3 rounded-lg font-semibold shadow-md transition">
+            <button onClick={()=>{window.location.href=("/register")}} className="bg-[#29754E] hover:bg-[#256B47] text-white px-6 py-3 cursor-pointer rounded-lg font-semibold shadow-md transition">
               Register Now
             </button>
-            <button className="border border-green-500 hover:bg-[#29754E] text-white px-6 py-3 rounded-lg font-semibold transition">
+            <button onClick={()=>{window.location.href=("/events")}} className="border border-green-500 hover:bg-[#29754E] text-white cursor-pointer px-6 py-3 rounded-lg font-semibold transition">
               See Schedule
             </button>
           </div>

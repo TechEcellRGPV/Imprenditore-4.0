@@ -34,7 +34,7 @@ const EventSchedule = () => {
     <section className="bg-[#073218] text-white px-4 py-16">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="lg:text-5xl font-bold mb-12  text-left text-white-300">Event Schedule</h2>
+        <h2 className="text-5xl font-bold mb-12  text-left text-white-300">Event Schedule</h2>
 
         {/* Date */}
         <div className="flex items-center gap-3 bg-[#29754E] hover:bg-[#256B47] text-white rounded-md lg:text-md px-4 py-2 w-fit mb-10">

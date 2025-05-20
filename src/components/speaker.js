@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const speakers = [
   {
     name: "Speaker Name",
@@ -15,30 +19,42 @@ const speakers = [
 
 export default function SpeakersSection() {
   return (
-    <div
+    <section
       id="speakers"
       className="bg-gradient-to-br from-white to-green-50 py-20 px-6"
     >
-      <h2 className="lg:text-5xl lg:ml-24 text-3xl text-center sm:text-left  font-bold text-green-900 mb-20">
+      <motion.h2
+        className="lg:text-5xl lg:ml-24 text-3xl text-center sm:text-left font-bold text-green-900 mb-20"
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
         Speakers
-      </h2>
+      </motion.h2>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {speakers.map((speaker, index) => (
-          <div key={index} className="text-center">
+          <motion.div
+            key={index}
+            className="text-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: index * 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
             <img
               src={speaker.image}
               alt={speaker.name}
-              className={`w-72 h-72 object-cover mx-auto ${
-                index === 0 ? "rounded-tl-[40px]" : "rounded-tl-[40px]"
-              }`}
+              className={`w-72 h-72 object-cover mx-auto rounded-tl-[40px]`}
             />
             <h3 className="mt-6 text-2xl sm:text-4xl text-[#004B0E]">
               {speaker.name}
             </h3>
-            <p className=" text-xl sm:text-2xl text-gray-600">{speaker.bio}</p>
-          </div>
+            <p className="text-xl sm:text-2xl text-gray-600">{speaker.bio}</p>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

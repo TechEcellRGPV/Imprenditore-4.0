@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-
+import { motion } from "framer-motion";
 const galleryImages = [
   "images/img1.jpg",
   "images/img2.png",
@@ -16,7 +16,12 @@ const galleryImages = [
 export default function GallerySection() {
   return (
     <section className="bg-[#073218] py-10 px-4">
-      <h2 className="text-5xl font-bold text-green-400 mb-8 text-center">Gallery</h2>
+      <motion.h2 
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      viewport={{ once: false, amount: 0.3 }}
+      className="text-5xl font-bold text-green-400 mb-8 text-center">Gallery</motion.h2>
 
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {galleryImages.map((src, index) => (

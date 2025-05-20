@@ -58,8 +58,8 @@ function RegistrationForm() {
   return (
     <>
       <Header />
-      <div className="min-h-screen px-4 py-8 sm:px-6 lg:px-8 pt-[10vmax] pb-[5vmax] bg-radial-[at_140%_50%] from-[#2fa444] via-[#0e4319] to-[#02300b] flex flex-col justify-center items-center backdrop-blur-3xl">
-        <div className="w-[95%] sm:w-full max-w-xl my-8 sm:my-12 p-6 sm:p-10 rounded-3xl bg-white/10 border border-green-500/40 shadow-lg backdrop-blur-lg">
+      <div className="min-h-screen px-4 py-8 sm:px-6 lg:px-8 pt-[7vmax] sm:pt-[5vmax] pb-[5vmax] bg-radial-[at_140%_50%] from-[#2fa444] via-[#0e4319] to-[#02300b] flex flex-col justify-center items-center backdrop-blur-3xl">
+        <div className="w-[95%] sm:w-full max-w-xl sm:max-w-3xl my-8 sm:my-12 p-6 sm:p-10 rounded-3xl bg-white/10 border border-green-500/40 shadow-lg backdrop-blur-lg">
           <div className="text-center mb-7">
             <h1 className="text-4xl sm:text-5xl font-extrabold text-[#7DEE92] mb-7 drop-shadow-md">
               Register Now!

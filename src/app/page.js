@@ -11,7 +11,6 @@ import Details from "../components/details.js";
 export default function Home() {
   return (
     <div className="min-h-screen w-full bg-green-950 text-white font-[family-name:var(--font-geist-sans)]">
-      {/* <Header /> */}
       <Hero/>
       <Details />
       <About />
@@ -19,7 +18,7 @@ export default function Home() {
       <EventSchedule/>
       <SpeakersSection />
       <GallerySection />
-      <Footer />
+      <Footer /> 
     </div>
   );
 }

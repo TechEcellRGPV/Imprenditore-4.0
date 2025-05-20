@@ -7,11 +7,13 @@ import EventSchedule from "../components/eventSchedule.js";
 import Footer from "../components/footer.js";
 import SpeakersSection from "../components/speaker.js";
 import GallerySection from "../components/gallery.js";
+import Details from "../components/details.js";
 export default function Home() {
   return (
     <div className="min-h-screen w-full bg-green-950 text-white font-[family-name:var(--font-geist-sans)]">
-      <Header />
+      {/* <Header /> */}
       <Hero/>
+      <Details />
       <About />
       <Countdown />
       <EventSchedule/>

@@ -10,7 +10,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-[#073218] text-white px-6 py-4 shadow-md fixed w-full z-50">
+    <header className=" text-white px-6 py-4 shadow-md bg-none w-full z-50">
       <div className="relative flex items-center justify-between max-w-7xl mx-auto">
         <div className="flex-shrink-0">
           <button

@@ -81,7 +81,7 @@ function RegistrationForm() {
               <div className="mb-8">
                 <label
                   htmlFor="name"
-                  className="text-[#7DEE92] text-lg sm:text-[22px] font-semibold mb-2 flex items-center gap-2"
+                  className="text-[#7DEE92] text-md sm:text-[22px] font-semibold mb-2 flex items-center gap-2"
                 >
                   <User className="w-5 h-5 sm:w-6 sm:h-6" /> Name{" "}
                   <span className="text-red-400">*</span>
@@ -93,7 +93,7 @@ function RegistrationForm() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Enter your name"
-                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-md bg-transparent outline-1 text-gray-100 placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 backdrop-blur-2xl border border-green-400/30"
+                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-md bg-transparent text-gray-100 placeholder-gray-200 border border-green-500 focus:border-white focus:ring-white focus:outline-none focus:ring-2 transition duration-200 backdrop-blur-2xl"
                   required
                 />
               </div>
@@ -102,7 +102,7 @@ function RegistrationForm() {
               <div className="mb-8">
                 <label
                   htmlFor="email"
-                  className="text-[#7DEE92] text-lg sm:text-[22px] font-semibold mb-2 flex items-center gap-2"
+                  className="text-[#7DEE92] text-md sm:text-[22px] font-semibold mb-2 flex items-center gap-2"
                 >
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6" /> Email Address{" "}
                   <span className="text-red-400">*</span>
@@ -114,7 +114,7 @@ function RegistrationForm() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Enter your email"
-                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-md bg-transparent outline-1 text-gray-100 placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 backdrop-blur-2xl border border-green-400/30"
+                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-md bg-transparent text-gray-100 placeholder-gray-200 border border-green-500 focus:border-white focus:ring-white focus:outline-none focus:ring-2 transition duration-200 backdrop-blur-2xl"
                   required
                 />
               </div>
@@ -123,7 +123,7 @@ function RegistrationForm() {
               <div className="mb-8">
                 <label
                   htmlFor="mobileNo"
-                  className="text-[#7DEE92] text-lg sm:text-[22px] font-semibold mb-2 flex items-center gap-2"
+                  className="text-[#7DEE92] text-md sm:text-[22px] font-semibold mb-2 flex items-center gap-2"
                 >
                   <Phone className="w-5 h-5 sm:w-6 sm:h-6" /> Mobile Number{" "}
                   <span className="text-red-400">*</span>
@@ -135,7 +135,7 @@ function RegistrationForm() {
                   value={formData.mobileNo}
                   onChange={handleChange}
                   placeholder="Enter mobile number"
-                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-md bg-transparent outline-1 text-gray-100 placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 backdrop-blur-2xl border border-green-400/30"
+                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-md bg-transparent text-gray-100 placeholder-gray-200 border border-green-500 focus:border-white focus:ring-white focus:outline-none focus:ring-2 transition duration-200 backdrop-blur-2xl"
                   required
                 />
               </div>
@@ -144,7 +144,7 @@ function RegistrationForm() {
               <div className="mb-10 sm:mb-16">
                 <label
                   htmlFor="enrollment"
-                  className="text-[#7DEE92] text-lg sm:text-[22px] font-semibold mb-2 flex items-center gap-2"
+                  className="text-[#7DEE92] text-md sm:text-[22px] font-semibold mb-2 flex items-center gap-2"
                 >
                   <BookUser className="w-5 h-5 sm:w-6 sm:h-6" /> Enrollment No.{" "}
                   <span className="text-red-400">*</span>
@@ -156,7 +156,7 @@ function RegistrationForm() {
                   value={formData.enrollment}
                   onChange={handleChange}
                   placeholder="Enter your enrollment no."
-                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-md bg-transparent outline-1 text-gray-100 placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 backdrop-blur-2xl border border-green-400/30"
+                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-md bg-transparent text-gray-100 placeholder-gray-200 border border-green-500 focus:border-white focus:ring-white focus:outline-none focus:ring-2 transition duration-200 backdrop-blur-2xl"
                   required
                 />
               </div>

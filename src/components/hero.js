@@ -1,36 +1,95 @@
 "use client";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+
 export default function Hero() {
+  const [navOpen, setNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setNavOpen(!navOpen);
+  };
+
   return (
-    <section className="bg-[#073218] text-white px-6 pt-37 sm:pt-60 pb-30">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-end justify-between gap-12">
+    <section
+      className="relative text-white bg-cover bg-center h-screen flex flex-col"
+      style={{
+        backgroundImage: "url('/hero-bg.png')",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/30 z-0"></div>
 
-       
-        <div className="md:w-2/3 text-4xl text-center sm:text-5xl lg:text-6xl font-bold tracking-wide leading-tight sm:text-left md:text-left">
-         <span className="block">IMPRENDITORE 4.O</span>
-          
-        </div>
+      {/* Header */}
+      <header className="relative z-10 w-full px-6 py-4">
+        <div className="flex items-center justify-between max-w-7xl mx-auto">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <button onClick={() => (window.location.href = "/")}>
+              <img
+                src="/images/logo.png"
+                alt="Imprenditore Logo"
+                className="h-10 w-auto"
+              />
+            </button>
+          </div>
 
-       
-        <div className="md:w-1/2 text-center md:text-left">
-          <p className="text-sm sm:text-base lg:text-xl font-mono text-white mb-4">
-            May 28, 2025 | RGPV Campus
-          </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold leading-snug mb-6">
-            SUSTAINABILITY UNEARTHED: <br />
-            <span className="text-green-300">Innovate Today, Sustain Tomorrow</span>
-          </h2>
-          <p className="text-gray-300 text-base sm:text-lg lg:text-xl mb-8 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie lacus eget sapien placerat, id aliquet purus gravida.
-          </p>
-          <div className="flex flex-wrap justify-center md:justify-start gap-4">
-            <button onClick={()=>{window.location.href=("/register")}} className="bg-[#29754E] hover:bg-[#256B47] text-white px-6 py-3 cursor-pointer rounded-lg font-semibold shadow-md transition">
+          {/* Nav links - desktop */}
+          <nav className="hidden md:flex space-x-6">
+            <a href="#about" className="hover:text-green-300">About</a>
+            <a href="/events" className="hover:text-green-300">Events</a>
+            <a href="#speakers" className="hover:text-green-300">Speakers</a>
+            <a href="#contact" className="hover:text-green-300">Contact Us</a>
+          </nav>
+
+          {/* CTA button - desktop */}
+          <div className="hidden md:block">
+            <button
+              onClick={() => (window.location.href = "/register")}
+              className="bg-[#29754E] hover:bg-[#256B47] text-white px-5 py-2 rounded-md font-medium"
+            >
               Register Now
             </button>
-            <button onClick={()=>{window.location.href=("/events")}} className="border border-green-500 hover:bg-[#29754E] text-white cursor-pointer px-6 py-3 rounded-lg font-semibold transition">
-              See Schedule
+          </div>
+
+          {/* Hamburger - mobile */}
+          <div className="md:hidden">
+            <button onClick={toggleNav}>
+              {navOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {navOpen && (
+          <div className="md:hidden bg-[#073218] text-white px-6 py-4 space-y-4 mt-3 rounded-md">
+            <a href="/" className="block hover:text-green-300">Home</a>
+            <a href="#about" className="block hover:text-green-300">About</a>
+            <a href="/events" className="block hover:text-green-300">Events</a>
+            <a href="/speakers" className="block hover:text-green-300">Speakers</a>
+            <a href="#contact" className="block hover:text-green-300">Contact Us</a>
+            <button
+              onClick={() => (window.location.href = "/register")}
+              className="bg-green-600 hover:bg-green-500 text-white w-full px-6 py-2 rounded-md font-medium"
+            >
+              Register Now
+            </button>
+          </div>
+        )}
+      </header>
+
+      {/* Hero Content */}
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+          IMPRENDITORE 4.O
+        </h1>
+
+        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold leading-snug">
+          SUSTAINABILITY UNEARTHED:
+          <br />
+          <span className="text-green-300">
+            Innovate Today, Sustain Tomorrow
+          </span>
+        </h2>
       </div>
     </section>
   );

@@ -147,11 +147,11 @@ export default function Hero() {
       </header>
 
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-widest ">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-7 tracking-widest ">
           IMPRENDITORE 4.O
         </h1>
 
-        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold leading-snug">
+        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold leading-snug">
           SUSTAINABILITY UNEARTHED:
           <br />
           <TypingAnimation />

@@ -147,7 +147,7 @@ export default function Hero() {
       </header>
 
       <div className="min-h-screen flex flex-col items-center justify-center px-4 text-center relative z-10">
-        <h1 className="w-full text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 tracking-widest text-center">
+        <h1 className="w-full text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 tracking-widest text-center relative mb-20">
           IMPRENDITORE 4.O
         </h1>
 

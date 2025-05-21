@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export default function Details() {
   return (
-    <section className="min-h-screen flex flex-col lg:flex-row overflow-hidden">
+    <section className="lg:min-h-screen flex flex-col lg:flex-row overflow-hidden">
       <motion.div
-        className="w-full lg:w-1/2"
+        className=" lg:block hidden w-full lg:w-1/2"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
@@ -20,7 +20,7 @@ export default function Details() {
       </motion.div>
 
       <motion.div
-        className="w-full lg:w-1/2 bg-green-950 text-white flex items-center px-6 py-10 lg:px-10"
+        className="w-full lg:w-1/2 bg-[#073218] text-white flex items-center px-6 py-10 lg:px-10"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
@@ -38,7 +38,7 @@ export default function Details() {
           </motion.p>
 
           <motion.h2
-            className="lg:text-6xl sm:text-4xl font-bold mb-4"
+            className="lg:text-5xl sm:text-4xl font-bold mb-4"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -72,11 +72,23 @@ export default function Details() {
             viewport={{ once: false, amount: 0.3 }}
           >
             <button
-              onClick={() => (window.location.href = "/register")}
-              className="bg-[#29754E] hover:bg-[#256B47] text-white px-6 py-2 rounded-md font-semibold"
-            >
-              Register Now
-            </button>
+  onClick={() => (window.location.href = "/register")}
+  className="relative overflow-hidden group px-6 py-2 rounded-md font-semibold text-white 
+             bg-[#29754E] border border-transparent shadow-md 
+             transition-all duration-300 ease-in-out
+             hover:text-[#29754E] hover:bg-transparent hover:border-[#29754E] 
+             hover:shadow-[0_0_16px_rgba(41,117,78,0.6)]"
+>
+  <span className="relative z-10">Register Now</span>
+
+  {/* Shimmer effect like the other button */}
+  <span
+    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
+               translate-x-[-100%] group-hover:translate-x-[100%] 
+               transition-transform duration-700 ease-in-out pointer-events-none"
+  />
+</button>
+
           </motion.div>
         </div>
       </motion.div>

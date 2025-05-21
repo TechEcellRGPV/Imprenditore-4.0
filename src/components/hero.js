@@ -152,7 +152,7 @@ export default function Hero() {
         </h1>
 
         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold leading-snug">
-          SUSTAINABILITY UNEARTHED:
+          SUSTAINABILITY UNEARTHED
           <br />
           <TypingAnimation />
         </h2>

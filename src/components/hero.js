@@ -38,10 +38,7 @@ function TypingAnimation() {
   }, [text]);
 
   return (
-    <span
-      className="text-green-300 font-mono mt-4 sm:mt-6 md:mt-8"
-      aria-label={text}
-    >
+    <span className="text-green-300 font-mono mt-[2vmax]" aria-label={text}>
       {displayedText}
     </span>
   );
@@ -65,7 +62,6 @@ export default function Hero() {
 
       <header className="relative z-20 w-full px-6 py-4 sm:py-6">
         {" "}
-        {/* Increased z-index to ensure it's above the main content */}
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex-shrink-0">
             <button onClick={() => (window.location.href = "/")}>

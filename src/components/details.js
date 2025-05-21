@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Details() {
   return (
     <section className="flex flex-col lg:flex-row overflow-hidden relative">
-      {/* Image Div - This will be the base for overlaying text on mobile */}
+      {/* Image Div*/}
       <motion.div
         className="w-full lg:w-1/2 relative z-0"
         initial={{ opacity: 0, x: -50 }}
@@ -19,7 +19,7 @@ export default function Details() {
           className="w-full h-full object-cover"
         />
 
-        {/* Overlay Text for Mobile ONLY - May 28, 2025 and Heading */}
+        {/* Overlay Text for Mobile ONLY*/}
         <div className="absolute top-0 right-0 w-1/2 flex flex-col justify-start items-end p-4 lg:hidden text-right">
           <motion.p
             className="text-lg sm:text-xl font-bold uppercase tracking-wider text-white mb-2" // Increased font size for mobile
@@ -32,7 +32,7 @@ export default function Details() {
           </motion.p>
 
           <motion.h2
-            className="sm:text-2xl text-xl font-bold mb-4" // Increased font size for mobile heading
+            className="sm:text-2xl text-xl font-bold mb-4" 
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -42,7 +42,6 @@ export default function Details() {
             <br />
             <span className="text-white text-lg sm:text-3xl">
               {" "}
-              {/* Increased font size for mobile subheading */}
               Innovate Today,
               <br className="hidden sm:block" /> Sustain Tomorrow
             </span>
@@ -50,7 +49,7 @@ export default function Details() {
         </div>
       </motion.div>
 
-      {/* Main Text Content Div - This will handle the rest of the text and desktop layout */}
+      {/* Main Text Content Div */}
       <motion.div
         className="w-full lg:w-1/2 bg-green-950 text-white flex flex-col justify-center px-6 py-10 lg:px-10"
         initial={{ opacity: 0, x: 50 }}
@@ -59,7 +58,6 @@ export default function Details() {
         viewport={{ once: false, amount: 0.3 }}
       >
         <div className="text-center lg:text-left w-full">
-          {/* These elements are hidden on mobile as they are part of the overlay above */}
           <motion.p
             className="hidden lg:block text-sm sm:text-lg font-bold uppercase tracking-wider text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -85,7 +83,6 @@ export default function Details() {
             </span>
           </motion.h2>
 
-          {/* This paragraph and button group always appear in this section */}
           <motion.p
             className="text-lg lg:text-2xl py-4 sm:text-xl text-gray-300 mb-6 mt-3" // Increased font size for mobile
             initial={{ opacity: 0, y: 20 }}

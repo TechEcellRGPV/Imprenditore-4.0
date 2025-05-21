@@ -41,7 +41,7 @@ const Countdown = () => {
       {Object.entries(timeLeft).map(([label, value]) => (
         <motion.div
           key={label}
-          className="bg-white rounded-2xl px-6 sm:px-8 py-10 text-center shadow-md min-w-[60px] sm:min-w-[80px]"
+          className="bg-white rounded-xl px-3 sm:px-5 py-4 text-center shadow-md min-w-[60px] sm:min-w-[80px]"
           variants={boxVariants}
           initial="hidden"
           whileInView="visible"

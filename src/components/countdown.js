@@ -36,24 +36,43 @@ const Countdown = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  return (
-    <div className="flex justify-center items-center gap-4 sm:gap-6 py-8 px-5 overflow-hidden sm:px-4 bg-[#073218] flex-nowrap overflow-x-hidden">
-      {Object.entries(timeLeft).map(([label, value]) => (
-        <motion.div
-          key={label}
-          className="bg-white rounded-xl px-3 sm:px-5 py-4 text-center shadow-md min-w-[60px] sm:min-w-[80px]"
-          variants={boxVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <p className="text-2xl font-extrabold text-black">{value}</p>
-          <p className="text-gray-500 font-semibold uppercase text-xs mt-1">{label}</p>
-        </motion.div>
-      ))}
-    </div>
-  );
-};
+//   return (
+//     <div className="flex justify-center items-center gap-4 sm:gap-6 py-8 px-5 overflow-hidden sm:px-4 bg-[#073218] flex-nowrap overflow-x-hidden">
+//       {Object.entries(timeLeft).map(([label, value]) => (
+//         <motion.div
+//           key={label}
+//           className="bg-white rounded-xl px-3 sm:px-5 py-4 text-center shadow-md min-w-[60px] sm:min-w-[80px]"
+//           variants={boxVariants}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: false, amount: 0.5 }}
+//           transition={{ duration: 0.6, ease: "easeOut" }}
+//         >
+//           <p className="text-2xl font-extrabold text-black">{value}</p>
+//           <p className="text-gray-500 font-semibold uppercase text-xs mt-1">{label}</p>
+//         </motion.div>
+//       ))}
+//     </div>
+//   );
+// };
+
+return (
+  <div className="flex justify-center items-center gap-6 sm:gap-8 py-10 px-6 sm:px-8 bg-[#073218] flex-nowrap overflow-x-hidden">
+    {Object.entries(timeLeft).map(([label, value]) => (
+      <motion.div
+        key={label}
+        className="bg-white rounded-2xl px-6 sm:px-8 py-6 text-center shadow-lg min-w-[90px] sm:min-w-[120px]"
+        variants={boxVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <p className="text-3xl sm:text-4xl font-extrabold text-black">{value}</p>
+        <p className="text-gray-500 font-semibold uppercase text-sm sm:text-base mt-2">{label}</p>
+      </motion.div>
+    ))}
+  </div>
+);
 
 export default Countdown;

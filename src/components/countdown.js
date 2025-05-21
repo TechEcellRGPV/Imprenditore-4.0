@@ -37,11 +37,11 @@ const Countdown = () => {
   };
 
   return (
-    <div className="flex justify-center items-center gap-6 sm:gap-8 py-12 px-5 overflow-hidden sm:px-4 bg-[#073218] flex-wrap overflow-x-hidden">
+    <div className="flex justify-center items-center gap-6 sm:gap-8 py-12 px-5 overflow-hidden sm:px-4 bg-[#073218] flex-nowrap overflow-x-hidden">
       {Object.entries(timeLeft).map(([label, value]) => (
         <motion.div
           key={label}
-          className="bg-white rounded-2xl px-8 sm:px-10 py-10 text-center shadow-md min-w-[100px] sm:min-w-[120px]"
+          className="bg-white rounded-2xl px-8 sm:px-10 py-10 text-center shadow-md min-w-[60px] sm:min-w-[80px]"
           variants={boxVariants}
           initial="hidden"
           whileInView="visible"

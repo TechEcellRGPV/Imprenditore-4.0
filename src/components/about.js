@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full bg-white text-green-900 py-24 px-6 md:px-16  pb:25 font-sans"
+      className="w-full bg-white text-green-900 py-24 px-6 md:px-16  pb:25 font-sans overflow-hidden"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
         <motion.div

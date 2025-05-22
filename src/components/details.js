@@ -102,11 +102,22 @@ export default function Details() {
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <button
+             <button
               onClick={() => (window.location.href = "/register")}
-              className="bg-[#29754E] hover:bg-[#256B47] text-white px-6 py-2 rounded-md font-semibold text-lg sm:text-xl" // Increased font size for mobile button
+              className="relative overflow-hidden group px-6 py-2 rounded-md font-semibold text-white 
+             bg-[#29754E] border border-transparent shadow-md 
+             transition-all duration-300 ease-in-out
+             hover:text-[#89f5be] hover:bg-transparent hover:border-[#29754E] 
+             hover:shadow-[0_0_16px_rgba(41,117,78,0.6)]"
             >
-              Register Now
+              <span className="relative z-10">Register Now</span>
+
+              {/* Shimmer effect like the other button */}
+              <span
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
+               translate-x-[-100%] group-hover:translate-x-[100%] 
+               transition-transform duration-700 ease-in-out pointer-events-none"
+              />
             </button>
           </motion.div>
         </div>

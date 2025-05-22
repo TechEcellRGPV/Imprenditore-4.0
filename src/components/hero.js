@@ -50,10 +50,11 @@ export default function Hero() {
 
   return (
     <section
-      className="relative text-white bg-cover bg-center h-screen flex flex-col overflow-hidden"
-      style={{
-        backgroundImage: "url('/hero-bg.png')",
-      }}
+      className="relative text-white bg-cover bg-center h-screen flex flex-col overflow-hidden 
+  bg-[url('/hero2.jpg')] md:bg-[url('/hero-bg.png')]"
+    // style={{
+    //   backgroundImage: "url('/hero-bg.png')",
+    // }}
     >
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 
@@ -61,14 +62,22 @@ export default function Hero() {
         {" "}
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex-shrink-0">
-            <button onClick={() => (window.location.href = "/")}>
+            <button
+              onClick={() => (window.location.href = "/")}
+              className="flex items-center space-x-3"
+            >
               <img
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 alt="Imprenditore Logo"
-                className="h-12 w-auto sm:h-14"
+                className="h-12 w-12 sm:h-14 sm:w-14 animate-spin-slow"
               />
+              <span className="text-white text-xl sm:text-2xl font-bold tracking-wide">
+                IMPRENDITORE
+              </span>
             </button>
           </div>
+
+
 
           <nav className="hidden md:flex space-x-8 text-lg font-medium">
             <a
@@ -110,7 +119,10 @@ export default function Hero() {
           <div className="hidden md:block">
             <button
               onClick={() => (window.location.href = "/register")}
-              className="bg-[#29754E] hover:bg-[#256B47] text-white px-6 py-2.5 rounded-md font-semibold text-lg transition-colors duration-300"
+              className="bg-[#29754E] text-white px-5 py-2 rounded-md font-medium border border-transparent 
+               transition duration-300 ease-in-out
+               hover:bg-transparent hover:text-[#eef5f2] 
+               hover:border-[#1f3127] hover:shadow-[0_0_12px_rgba(41,117,78,0.8)]"
             >
               Register Now
             </button>
@@ -180,23 +192,25 @@ export default function Hero() {
         )}
       </header>
 
-      <div className="absolute inset-x-0 bottom-0 top-16 sm:top-20 flex flex-col items-center justify-center px-4 text-center z-10 pb-16">
+      <div className="absolute inset-x-0 bottom-0 top-16 sm:top-20 flex flex-col items-center justify-center px-4 text-center z-10 pb-8">
         {" "}
         {/* Changed positioning for hero content */}
         <h1 className="w-full text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-4 tracking-widest text-center drop-shadow-lg">
           IMPRENDITORE 4.O
         </h1>
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight drop-shadow-md">
+        <h2 className="text-xl sm:text-2xl md:text-3xl mb-8 lg:text-4xl xl:text-5xl font-semibold leading-tight drop-shadow-md">
           SUSTAINABILITY UNEARTHED
           <br />
           <TypingAnimation />
         </h2>
+        <div className="block md:hidden z-30">
+          <Countdown isMobile={true} />
+        </div>
       </div>
 
       {/* Countdown (mobile only) */}
-      <div className="block md:hidden z-30">
-        <Countdown isMobile={true} />
-      </div>
+
     </section>
+
   );
 }

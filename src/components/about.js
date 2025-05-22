@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full bg-white text-green-900 py-24 px-6 md:px-16  pb:25 font-sans overflow-hidden"
+      className="w-full bg-gradient-to-br from-white to-green-50 text-green-900 py-16  px-6 md:px-16  pb:25 font-sans"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
         <motion.div
@@ -25,7 +25,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="lg:text-5xl text-2xl sm:text-4xl font-bold font-serif text-green-800 leading-tight"
+            className="lg:text-5xl text-4xl sm:text-4xl font-bold text-green-800 leading-tight"
           >
             About <span className="text-green-600">Imprenditore</span>
           </motion.h2>
@@ -43,15 +43,27 @@ export default function About() {
             development.
           </motion.p>
           <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            viewport={{ once: false, amount: 0.3 }}
-            onClick={() => router.push("admin/more")}
-            className="bg-[#29754E] hover:bg-[#256B47] text-white px-8 py-4 my-6 rounded-md font-medium transition duration-300"
-          >
-            More About Us
-          </motion.button>
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.5, delay: 0.6 }}
+  viewport={{ once: false, amount: 0.3 }}
+  onClick={() => router.push("admin/more")}
+  className="relative overflow-hidden group px-6 py-2 rounded-md font-semibold text-white 
+             bg-[#29754E] border border-transparent shadow-md 
+             transition-all duration-300 ease-in-out
+             hover:text-[#29754E] hover:bg-white hover:border-[#29754E] 
+             hover:shadow-[0_0_16px_rgba(41,117,78,0.6)]"
+>
+  <span className="relative z-10">More About Us</span>
+
+  {/* Shimmer line */}
+  <span
+    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
+               translate-x-[-100%] group-hover:translate-x-[100%] 
+               transition-transform duration-700 ease-in-out pointer-events-none"
+  />
+</motion.button>
+
         </motion.div>
 
         <motion.div
@@ -73,7 +85,7 @@ export default function About() {
           <motion.img
             src="/images/about2.png"
             alt="Fire performer"
-            className="rounded-xl shadow-md w-54 sm:w-62 md:w-60  absolute bottom-[-15vmax] right-[-5vmax] sm:bottom-[-10vmax] sm:right-[2vmax] transform z-10"
+            className="rounded-xl shadow-md w-54 mb-20 sm:w-62 md:w-60  absolute bottom-[-15vmax] right-[-5vmax] sm:bottom-[-10vmax] sm:right-[2vmax] transform z-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}

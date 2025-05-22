@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const Countdown = () => {
+const Countdown = ({ isMobile = false }) => {
   const calculateTimeLeft = () => {
     const eventDate = new Date("2025-05-28T00:00:00");
     const now = new Date();
@@ -36,20 +36,23 @@ const Countdown = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+  // 🎯 This class decides where it's visible
+  const visibilityClass = isMobile ? 'flex md:hidden' : 'hidden md:flex';
+
   return (
-    <div className="flex justify-center items-center gap-4 sm:gap-6 py-8 px-5 overflow-hidden sm:px-4 bg-[#073218] flex-nowrap overflow-x-hidden">
+    <div className={`${visibilityClass} justify-center items-center lg:gap-12 gap-6 py-8 px-5 mt-4 overflow-hidden sm:px-4  flex-nowrap overflow-x-auto`}>
       {Object.entries(timeLeft).map(([label, value]) => (
         <motion.div
           key={label}
-          className="bg-white rounded-xl px-3 sm:px-5 py-4 text-center shadow-md min-w-[60px] sm:min-w-[80px]"
+          className="bg-white/10 rounded-xl lg:px-16 sm:px-4 py-4 lg:py-12 text-center shadow-md min-w-[60px] sm:min-w-[70px] border border-white/40 backdrop-blur-sm ring-1 ring-white/30"
           variants={boxVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <p className="text-2xl font-extrabold text-black">{value}</p>
-          <p className="text-gray-500 font-semibold uppercase text-xs mt-1">{label}</p>
+          <p className="text-2xl sm:text-xl md:text-4xl lg:text-5xl font-extrabold text-white">{value}</p>
+          <p className="text-[10px] sm:text-xs md:text-sm lg:text-md text-white font-semibold uppercase mt-1">{label}</p>
         </motion.div>
       ))}
     </div>

@@ -50,49 +50,49 @@ export default function SpeakersSection() {
         <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-3">
           {speakers.map((speaker, index) => (
             <motion.div
-  key={index}
-  className="relative group rounded-tl-4xl bg-white shadow-md overflow-hidden transition-all duration-500"
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7, delay: index * 0.2 }}
-  viewport={{ once: false, amount: 0.3 }}
->
-  {/* Image with zoom on hover */}
-  <div className="relative h-72 overflow-hidden">
-    <img
-      src={speaker.image}
-      alt={speaker.name}
-      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-    />
-    {/* Overlay info */}
-    <div className="absolute inset-0 bg-black/50 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4">
-      <h3 className="text-white text-2xl font-semibold">{speaker.name}</h3>
-      <p className="text-gray-100 text-sm mt-1">{speaker.bio}</p>
+              key={index}
+              className="relative group rounded-tl-4xl bg-white shadow-md overflow-hidden transition-all duration-500"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: index * 0.2 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              {/* Image with zoom on hover */}
+              <div className="relative h-72 overflow-hidden">
+                <img
+                  src={speaker.image}
+                  alt={speaker.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Overlay info */}
+                <div className="absolute inset-0 bg-black/50 flex flex-col justify-end opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500 p-4">
+                  <h3 className="text-white text-2xl font-semibold">{speaker.name}</h3>
+                  <p className="text-gray-100 text-sm mt-1">{speaker.bio}</p>
 
-      {/* Social Icons with animation */}
-      <div className="flex space-x-4 mt-3">
-        {[
-          { icon: <FaLinkedin size={20} />, url: speaker.socials.linkedin },
-          { icon: <FaGithub size={20} />, url: speaker.socials.github },
-          { icon: <FaTwitter size={20} />, url: speaker.socials.twitter },
-        ].map((social, i) => (
-          <motion.a
-            key={i}
-            href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white"
-            whileHover={{ scale: 1.3, rotate: 8 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            {social.icon}
-          </motion.a>
-        ))}
-      </div>
-    </div>
-  </div>
-</motion.div>
+                  {/* Social Icons with animation */}
+                  <div className="flex space-x-4 mt-3">
+                    {[
+                      { icon: <FaLinkedin size={20} />, url: speaker.socials.linkedin },
+                      { icon: <FaGithub size={20} />, url: speaker.socials.github },
+                      { icon: <FaTwitter size={20} />, url: speaker.socials.twitter },
+                    ].map((social, i) => (
+                      <motion.a
+                        key={i}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white"
+                        whileHover={{ scale: 1.3, rotate: 8 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        {social.icon}
+                      </motion.a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
 
           ))}
         </div>

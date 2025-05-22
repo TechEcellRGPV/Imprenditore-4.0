@@ -113,7 +113,7 @@ export default function Events() {
       <div className="min-h-screen bg-green-950 text-white px-4 py-10">
         <div className="max-w-4xl mx-auto mt-8 md:mt-15">
           <div className="text-center md:text-left mb-8 md:mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-green-300">
+            <h1 className="text-4xl pb-4 md:text-6xl font-bold text-green-300">
               Events
             </h1>
             <div
